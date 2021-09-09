@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Menu>
+	<item>
+		<caption>User Management</caption>
+		<link>#</link>
+		<image>fas fa-users-cog</image>
+		<sub>
+			<item>
+				<caption>Edit User</caption>
+				<link>http://www.bing.com</link>
+				<image>fas fa-user-edit</image>
+			</item>
+			<item>
+				<caption>Change Passowrd</caption>
+				<link>http://www.bing.com</link>
+				<image>fas fa-key</image>
+			</item>
+			<item>
+				<caption>Profile</caption>
+				<link>http://www.bing.com</link>
+				<image>far fa-user-circle</image>
+			</item>
+		</sub>
+	</item>
+	<item>
+		<caption>Math Settings</caption>
+		<link>../math/settings.php</link>
+		<image>fas fa-cogs</image>
+	</item>
+	<item>
+		<caption>Basic Math</caption>
+		<link>#</link>
+		<image>fas fa-calculator</image>
+		<sub>
+			<item>
+				<caption>Addition</caption>
+				<link>../math/basic-addition.php</link>
+				<image>fas fa-plus</image>
+			</item>
+			<item>
+				<caption>Subtraction</caption>
+				<link>../math/basic-sub.php</link>
+				<image>fas fa-minus</image>
+			</item>
+			<item>
+				<caption>Multiplication</caption>
+				<link>../math/basic-mul.php</link>
+				<image>fas fa-times</image>
+			</item>
+			<item>
+				<caption>Division</caption>
+				<link>../math/basic-div.php</link>
+				<image>fas fa-divide</image>
+			</item>
+		</sub>
+	</item>
+	<item>
+		<caption>Inermediate Math</caption>
+		<link>#</link>
+		<image>fas fa-calculator</image>
+		<sub>
+			<item>
+				<caption>Addition</caption>
+				<link>#</link>
+				<image>fas fa-plus</image>
+			</item>
+			<item>
+				<caption>Subtraction</caption>
+				<link>#</link>
+				<image>fas fa-minus</image>
+			</item>
+			<item>
+				<caption>Multiplication</caption>
+				<link>#</link>
+				<image>fas fa-times</image>
+			</item>
+		</sub>
+	</item>
+	<item>
+		<caption>Advance Math</caption>
+		<link>#</link>
+		<image>fas fa-calculator</image>
+		<sub>
+			<item>
+				<caption>Addition</caption>
+				<link>#</link>
+				<image>fas fa-plus</image>
+			</item>
+			<item>
+				<caption>Subtraction</caption>
+				<link>#</link>
+				<image>fas fa-minus</image>
+			</item>
+			<item>
+				<caption>Multiplication</caption>
+				<link>#</link>
+				<image>fas fa-times</image>
+			</item>
+		</sub>
+	</item>
+</Menu>

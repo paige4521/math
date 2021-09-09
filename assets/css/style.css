@@ -1,0 +1,129 @@
+#top-banner{
+    width: 100%;
+    height: 250px;
+    background-image: url('./assets/images/child.jpg');
+    background-size: 100%;
+    background-position-y: center;
+}
+#top-banner-screen{
+    width:100%;
+    height: 100%;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.7);
+    color:#fff;
+}
+#login-form{
+    width:100%;
+    padding:15px;
+}
+#login-form>#title-bar{
+    /* width:100%; */
+    background-color: rgb(25, 32, 65);
+    margin-top: -15px;
+    margin-right: -15px;
+    margin-left: -15px; 
+    padding: 8px 15px;
+    
+}
+#login-form>#title-bar>p{
+    font-size: 125%;
+    color:white;
+    margin:0;
+    padding: 0;
+}
+#top-bar{
+    width:100%;
+    height: 100px;
+    background-color: #333;
+}
+
+/* Side Bar */
+[class ^= "sn-cust-"]{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+[class ^= "sn-cust-"]>li{
+    display: block;
+    background-color: #fff;
+    padding:5px 15px;
+    margin:2px 0px;
+}
+.ava,
+.sn-cust-sub>li>a{
+    position: relative;
+    margin:0;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color:#333;
+    line-height: 100%;
+}
+.ava>i{
+    
+    display: inline-block;
+    text-align: left;
+    margin-right:20px;
+}
+.ava>.sn-rotation{
+    position: absolute;
+    right:5px;
+}
+
+.sn-cust-sub>li{
+    background-color: #ddd;
+}
+.info-bar{
+    width:100%;
+    height: 120px;
+    background-color: rgb(16, 47, 88);
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.math td{
+    font-size: 32px;
+}
+td>span{
+    display: inline-block;
+    text-align: right;
+    min-width: 50px;
+    font-size: 24px;
+    color: black;
+    border: 1px dotted;
+    padding:5px 10px;
+    margin:2px;
+}
+.wrong-res{
+    color: red;
+
+}
+.wrong-res::after{
+    font-family:'Font Awesome 5 pro';
+	font-weight: 900;
+	display: inline-block;
+	font-size:1.5rem;
+	content: '\f057';
+	margin-right: 0.625rem;
+}
+.correct-res{
+    color: rgb(5, 44, 5);
+
+}
+.correct-res::after{
+    font-family:'Font Awesome 5 pro';
+	font-weight: 900;
+	display: inline-block;
+	font-size:1.5rem;
+	content: '\f058';
+	margin-right: 0.625rem;
+}
+
+/* Card */
+.card-title{
+    background-color: rgb(25, 32, 65);
+    color: white;
+}
