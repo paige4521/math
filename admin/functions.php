@@ -1,7 +1,7 @@
  <?php
     defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
     
-    require_once($_SERVER['DOCUMENT_ROOT'].DS.'work'.DS.'neely'.DS.'admin'.DS.'session'.DS.'session.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].DS.'admin'.DS.'session'.DS.'session.php');
     $data = Session::getInstance();
     
     function redirect($url) {
