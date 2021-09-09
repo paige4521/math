@@ -1,11 +1,14 @@
 <?php 
 require_once('./admin/config.php');
-require_once('./inc/header.php');
+if(!isset($data->email)){
+        header("Location: ./users/dashboard.php");
+        exit;
+    }      
+// require_once('./inc/header.php');
 ?>
-    <div id="top-banner">
+    <!-- <div id="top-banner">
        <div id="top-banner-screen" class="d-flex align-items-center justify-content-center">
             <h1>Basic Math for Kids test</h1>
-            <p><?php echo (SITE_ROOT.'assets'.DS.'bootstrap'.DS.'css'.DS.'bootstrap.min.css') ?></p>
         </div>
     </div>
     <div class="container">
@@ -30,7 +33,7 @@ require_once('./inc/header.php');
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 <?php
 require_once('./inc/footer.php');
 ?>
