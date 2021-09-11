@@ -1,8 +1,7 @@
 <?php
 	require_once 'config.php';
 	try {
-		//$dsn = "pgsql:host=$host;port=5432;dbname=$db;";
-		$dsn = "pgsql:host=$host;dbname=$db;";
+		$dsn = "pgsql:host=".$host.";port=".$port.";dbname=".$db.";user=".$user.";password=".$password;
 		// make a database connection
 		$pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);	
 
