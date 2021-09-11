@@ -1,10 +1,10 @@
 <?php
     require_once('../admin/config.php');
     require_once(SITE_ROOT.DS.'admin'.DS.'functions.php');
-    // if(!isset($data->email)){
-    //     header("Location: ../index.php");
-    //     exit;
-    // }       
+    if(!isset($data->email)){
+        header("Location: ../index.php");
+        exit;
+    }       
 
     require_once('../inc/header.php');
     

@@ -1,14 +1,10 @@
 <?php 
 require_once('./admin/config.php');
-if(!isset($data->email)){
-        header("Location: ./users/dashboard.php");
-        exit;
-    }      
-// require_once('./inc/header.php');
+require_once('./inc/header.php');
 ?>
-    <!-- <div id="top-banner">
+    <div id="top-banner">
        <div id="top-banner-screen" class="d-flex align-items-center justify-content-center">
-            <h1>Basic Math for Kids test</h1>
+            <h1>Basic Math for Kids</h1>
         </div>
     </div>
     <div class="container">
@@ -33,7 +29,7 @@ if(!isset($data->email)){
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 <?php
 require_once('./inc/footer.php');
 ?>

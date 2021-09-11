@@ -1,8 +1,8 @@
 <?php 
 require_once('config.php');
-
 require_once(SITE_ROOT.'inc'.DS.'header.php');
 require_once('./db/db.php');
+
 
     $err = [];
     $va = [];
@@ -16,20 +16,47 @@ require_once('./db/db.php');
         if($va['userPassword'] != $va['userConfPassword']){
             $err['userConfPassword'] = "err";
         }
-        $em = db::getInstance()->get('users',array('user_email','=',$va['userEmail']))->count();
-        if($em > 0 ) $err['email'] = "err";
         
+        $user = find_user_by_email($pdo,$va['userEmail']);
+        if($user[0]->count > 0 ) $err['email'] = "err";
         if(!in_array('err',$err)){
-            db::getInstance()->Insert('users',
-                array(
-                    'user_first_name'   => $va['userFirstName'],
-                    'user_last_name'    => $va['userLastName'],
-                    'user_email'        => $va['userEmail'],
-                    'user_password'     => password_hash($va['userConfPassword'], PASSWORD_ARGON2I),
-                    'user_permission'   => 'user'
-                ));
+            $user_first_name    = $va['userFirstName'];
+            $user_last_name     = $va['userLastName'];
+            $user_email         = $va['userEmail'];
+            $user_password      = password_hash($va['userConfPassword'], PASSWORD_ARGON2I);
+            $user_avatar        = 'avatar';
+            $user_permission    = 'user';
+        
+
+            $sql = 'INSERT INTO "Users"(
+                user_firstName,
+                user_lastName,
+                user_email,
+                user_password,
+                user_avatar,
+                user_permission
+            ) VALUES(
+                :user_first_name,
+                :user_last_name,
+                :user_email,
+                :user_password,
+                :user_avatar,
+                :user_permission
+            )';
+            
+            $statement = $pdo->prepare($sql);
+            
+            $statement->execute([
+                ':user_first_name'  => $user_first_name, 
+                ':user_last_name'   => $user_last_name, 
+                ':user_email'       => $user_email, 
+                ':user_password'    => $user_password, 
+                ':user_avatar'      => $user_avatar, 
+                ':user_permission'  => $user_permission
+            ]);
         }
     }
+
     function validate_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
@@ -37,11 +64,11 @@ require_once('./db/db.php');
         return $data;
     }
 ?>
-    <div id="top-banner">
+    <!-- <div id="top-banner">
        <div id="top-banner-screen" class="d-flex align-items-center justify-content-center">
-            <h1>Bismillahir Rahmanir Rahim</h1>
+            <h1>Register New User</h1>
         </div>
-    </div>
+    </div> -->
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-12 offset-md-2">
@@ -83,6 +110,7 @@ require_once('./db/db.php');
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Register</button>
+                        <a href="../index.php" type="submit" class="btn btn-success">Back to Login</a>
                     </form>
                 </div>
             </div>
