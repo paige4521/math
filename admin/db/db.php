@@ -1,9 +1,24 @@
 <?php
 	require_once 'config.php';
 	try {
-		$dsn = "pgsql:host=".$host.";port=".$port.";dbname=".$db.";user=".$user.";password=".$password;
+		
+		$db = parse_url(getenv("DATABASE_URL"));
+
+		$pdo = new PDO("pgsql:" . sprintf(
+		    "host=%s;port=%s;user=%s;password=%s;dbname=%s",
+		    $db["ec2-18-215-44-132.compute-1.amazonaws.com"],
+		    $db["5432"],
+		    $db["llfkqcwukflktc"],
+		    $db["35af897fd853f3006d773a02b34474c956a0ad96767870d8fbe6e1b59ea9afad
+URI"],
+		    ltrim($db["de3tpd5vt7fb0b"], "/")
+		));
+		
+		
+		
+// 		$dsn = "pgsql:host=".$host.";port=".$port.";dbname=".$db.";user=".$user.";password=".$password;
 		// make a database connection
-		$pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);	
+// 		$pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);	
 
 		// if ($pdo) {
 		// 	echo "Connected to the $db database successfully!";
